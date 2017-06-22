@@ -84,13 +84,13 @@ fn danger_of_freezing(temp: Celsius) -> bool;
 
 ```rust
 impl Celsius {
-    to_fahrenheit(&self) -> Fahrenheit {
+    fn to_fahrenheit(&self) -> Fahrenheit {
         Fahrenheit(self.0 * 9./5. + 32.)
     }
 }
 
 impl Fahrenheit {
-    to_celsius(&self) -> Celsius {
+    fn to_celsius(&self) -> Celsius {
         Celsius((self.0 - 32.) * 5./9.)
     }
 }
